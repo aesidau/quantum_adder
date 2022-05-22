@@ -1,0 +1,1 @@
+This is some simple Qiskit code to add two two-bit numbers and get a three-bit result, in a way that can be run on a five qubit quantum computer or simulator. The current code adds 2 (0b10) and 3 (0b11) and should get 5 (0b101).
