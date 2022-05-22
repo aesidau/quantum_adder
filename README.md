@@ -32,4 +32,7 @@ c: 3/═════════════════════════
                                                                                      0  1  2 
 Total counts are: {'101': 1000}
 ```
-The `addcloud.py` version will take longer to run as it is executing on a real quantum computer somewhere, which might take a while if that quantum computer has a lot of compute jobs queued up. It will also return a range of counts due to the noise inherent in a real quantum computer, so the code will pop up a histogram at the end to make it easier to understand.
+You can see that it has run 1000 times, and every time it has come up with the right answer of 2 + 3, i.e. 5 (0b101).
+
+The `addcloud.py` version will take longer to run as it is executing on a real quantum computer somewhere, which might take a while if that quantum computer has a lot of compute jobs queued up. It will also return a range of counts due to the noise inherent in a real quantum computer, so the code will pop up a histogram at the end to make it easier to understand. The histogram from a real quantum compute will look something like this:
+![Screenshot of histogram from an actual run of addcloud.py](assets/histogram_example.png)
