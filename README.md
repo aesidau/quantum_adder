@@ -8,13 +8,13 @@ To get this running, first install Qiskit
 ```
 % pip3 install qiskit
 ```
-and set up an account on [IBM Quantum](https://quantum-computing.ibm.com/). Also ensure you have [saved your API token](https://quantum-computing.ibm.com/lab/docs/iql/manage/account/ibmq)
+and set up an account on [IBM Quantum](https://quantum-computing.ibm.com/). Also ensure you have [saved your API token](https://quantum-computing.ibm.com/lab/docs/iql/manage/account/ibmq).
 
 ## Running the code
 There are two version of the code:
 1. `add.py` runs the addition in the simulator
 2. `addcloud.py` runs the addition in a cloud-based quantum computer (by default, on the five qubit Belem system)
-Both of these word the same way, just run it like this:
+Both of these work the same way, just run it like this:
 ```
 % python3 add.py
            ░                                                                      ░          
@@ -34,5 +34,5 @@ Total counts are: {'101': 1000}
 ```
 You can see that it has run 1000 times, and every time it has come up with the right answer of 2 + 3, i.e. 5 (0b101).
 
-The `addcloud.py` version will take longer to run as it is executing on a real quantum computer somewhere, which might take a while if that quantum computer has a lot of compute jobs queued up. It will also return a range of counts due to the noise inherent in a real quantum computer, so the code will pop up a histogram at the end to make it easier to understand. The histogram from a real quantum compute will look something like this:
+The `addcloud.py` version will take longer to run as it is executing on a real quantum computer somewhere, which might take a while if that quantum computer has a lot of compute jobs queued up. It will also return a range of counts due to the noise inherent in a real quantum computer, so the code will pop up a histogram at the end to make it easier to understand. The histogram from a real quantum computer will look something like this:
 ![Screenshot of histogram from an actual run of addcloud.py](assets/histogram_example.png)
