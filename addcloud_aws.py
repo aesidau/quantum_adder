@@ -45,6 +45,7 @@ circuit.cnot(1,4) # CNOT(a_1, carry)
 circuit.ccnot(0,2,1) # Toffoli(a_0, b_0, a_1)
 # Step (4)
 # Peres gate, A=1, B=3, C=4 == Peres(a_1, b_1, carry)
+# Implement Peres gate in terms of a Toffoli gate as per Lukac and Perkowski et al https://www.researchgate.net/publication/220637922_Evolutionary_Approach_to_Quantum_and_Reversible_Circuits_Synthesis
 circuit.ccnot(1,3,4)
 circuit.cnot(1,3)
 # Peres gate, A=0, B=2, C=1 == Peres (a_0, b_0, a_1)
@@ -53,9 +54,6 @@ circuit.cnot(0,2)
 # Step (5) - skipped
 # Step (6)
 circuit.cnot(1,3) # CNOT(a_1, b_1)
-
-# Map the quantum measurement to the classical bits
-#circuit.measure([2,3,4],[0,1,2]) # Just measure the result
 
 # Draw the circuit
 print(circuit)

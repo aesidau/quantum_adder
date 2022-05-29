@@ -2,7 +2,6 @@ import numpy as np
 from qiskit import QuantumCircuit, transpile
 from qiskit.providers.aer import QasmSimulator
 from qiskit.visualization import plot_histogram
-from qiskit.circuit.library import SXdgGate
 
 # Use Aer's qasm_simulator
 simulator = QasmSimulator()
@@ -22,9 +21,6 @@ simulator = QasmSimulator()
 # qubit_3 = sum_1
 # qubit_4 = sum_2
 circuit = QuantumCircuit(5, 3)
-
-# Define a controlled SX dagger gate as per https://quantumcomputing.stackexchange.com/questions/18107/how-to-construct-a-controlled-v-gate-in-qiskit
-csxd = SXdgGate().control()
 
 # Set initial state, by flipping bits using x()
 # A = 2
@@ -46,15 +42,12 @@ circuit.cx(1,4) # CNOT(a_1, carry)
 circuit.ccx(0,2,1) # Toffoli(a_0, b_0, a_1)
 # Step (4)
 # Peres gate, A=1, B=3, C=4 == Peres(a_1, b_1, carry)
-circuit.append(csxd, [1,4])
-circuit.append(csxd, [3,4])
+# Implement Peres gate in terms of a Toffoli gate as per Lukac and Perkowski et al https://www.researchgate.net/publication/220637922_Evolutionary_Approach_to_Quantum_and_Reversible_Circuits_Synthesis
+circuit.ccx(1,3,4)
 circuit.cx(1,3)
-circuit.csx(3,4)
 # Peres gate, A=0, B=2, C=1 == Peres (a_0, b_0, a_1)
-circuit.append(csxd, [0,1])
-circuit.append(csxd, [2,1])
+circuit.ccx(0,2,1)
 circuit.cx(0,2)
-circuit.csx(2,1)
 # Step (5) - skipped
 # Step (6)
 circuit.cx(1,3) # CNOT(a_1, b_1)
