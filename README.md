@@ -37,6 +37,8 @@ q_4: ──────░──────┤ X ├─────┤ Sxdg ├
            ░      └───┘     └──────┘└──────┘      └────┘                          ░  ║  ║ └╥┘
 c: 3/════════════════════════════════════════════════════════════════════════════════╩══╩══╩═
                                                                                      0  1  2 
+Compiled circuit depth = 23
+
 Total counts are: {'101': 1000}
 ```
 You can see that it has run 1000 times, and every time it has come up with the right answer of 2 + 3, i.e. 5 (0b101).
