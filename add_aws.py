@@ -6,7 +6,7 @@ from braket.devices import LocalSimulator
 # Use AWS Braket's simulator
 device = LocalSimulator()
 
-# Create a Quantum Circuit with 5 qubits and 3 classical registers
+# Create a Quantum Circuit with 5 qubits
 # Adder algorithm from https://www.researchgate.net/publication/262163558_Design_of_Efficient_Reversible_Logic-Based_Binary_and_BCD_Adder_Circuits
 # Input:
 # qubit_0 = a_0

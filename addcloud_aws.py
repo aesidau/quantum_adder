@@ -5,13 +5,19 @@ from braket.aws import AwsDevice
 
 # Use AWS cloud simulator
 device = AwsDevice("arn:aws:braket:::device/quantum-simulator/amazon/dm1")
-# Use quantum computer from IonQ - n.b. 1000 shots = about $10.30
+# Use 11 qubit quantum computer from IonQ - n.b. 1000 shots = about $10.30
 #device = AwsDevice("arn:aws:braket:::device/qpu/ionq/ionQdevice")
+# Use 38 qubit quantum computer from Rigetti - n.b. 1000 shots = about $0.65
+#device = AwsDevice("arn:aws:braket:::device/qpu/rigetti/Aspen-11")
+# Use 80 qubit quantum computer from Rigetti - n.b. 1000 shots = about $0.65
+#device = AwsDevice("arn:aws:braket:us-west-1::device/qpu/rigetti/Aspen-M-1")
+# Use 8 qubit quantum computer from OQC - n.b. 1000 shots = about $0.65
+#device = AwsDevice("arn:aws:braket:eu-west-2::device/qpu/oqc/Lucy")
 
 #device_operations = device.properties.dict()['action']['braket.ir.jaqcd.program']['supportedOperations']
 #print('Quantum Gates supported by {}:\n {}'.format(device.name, device_operations))
 
-# Create a Quantum Circuit with 5 qubits and 3 classical registers
+# Create a Quantum Circuit with 5 qubits
 # Adder algorithm from https://www.researchgate.net/publication/262163558_Design_of_Efficient_Reversible_Logic-Based_Binary_and_BCD_Adder_Circuits
 # Input:
 # qubit_0 = a_0
