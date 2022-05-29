@@ -78,11 +78,12 @@ counts = result.measurement_counts
 clean_counts = {}
 for key in counts:
   clean_key = key[2:][::-1]
-  clean_counts[clean_key] = clean_counts.get(clean_key, 0) + counts[key]/1000.0
+  clean_counts[clean_key] = clean_counts.get(clean_key, 0) + counts[key]
 
 print("\nTotal counts are:",clean_counts)
 
 # Plot a histogram
-plt.bar(clean_counts.keys(), clean_counts.values())
+
+plt.bar(clean_counts.keys(), list(map(lambda x: x/1000.0, clean_counts.values())))
 plt.ylabel('Probabilities')
 plt.show()
