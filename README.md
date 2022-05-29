@@ -1,5 +1,5 @@
 # Quantum Adder
-This is some simple Qiskit code to add two two-bit numbers and get a three-bit result, in a way that can be run on a five qubit quantum computer or simulator. The current code adds 2 (0b10) and 3 (0b11) and should get 5 (0b101).
+This is some simple quantum computing (IBM Qiskit and AWS Braket) code to add two two-bit numbers and get a three-bit result, in a way that can be run on a five qubit quantum computer or simulator. The current code adds 2 (0b10) and 3 (0b11) and should get 5 (0b101).
 
 The adder is based on: [Thapliyal, Himanshu & Ranganathan, N. (2013). Design of Efficient Reversible Logic-Based Binary and BCD Adder Circuits. ACM Journal on Emerging Technologies in Computing Systems (JETC). 9. 10.1145/2491682.](https://www.researchgate.net/publication/262163558_Design_of_Efficient_Reversible_Logic-Based_Binary_and_BCD_Adder_Circuits)
 
