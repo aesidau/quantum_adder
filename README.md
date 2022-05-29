@@ -8,7 +8,7 @@ To get this running, first install Qiskit
 ```
 % pip3 install qiskit
 ```
-and set up an account on [IBM Quantum](https://quantum-computing.ibm.com/). Also ensure you have [saved your API token](https://quantum-computing.ibm.com/lab/docs/iql/manage/account/ibmq)
+and set up an account on [IBM Quantum](https://quantum-computing.ibm.com/). Also ensure you have [saved your API token](https://quantum-computing.ibm.com/lab/docs/iql/manage/account/ibmq).
 
 ## Getting startups - on AWS Braket
 To get this running, first install AWS Braket
@@ -21,7 +21,7 @@ and ensure you have already configured an AWS account and installed the [CLI too
 There are two version of the code for each of Qiskit and Braket: 
 1. `add.py` (or `add_aws.py`) runs the addition in the simulator
 2. `addcloud.py` (or `addcloud_aws.py`) runs the addition in a cloud-based quantum computer (by default, on the five qubit Belem system on Qiskit or the 34 qubit SV1 simulator on Braket)
-They all work the same way - just run it like this:
+They all work the same way - just run them like this:
 ```
 % python3 add.py
            ░                                                                      ░          
