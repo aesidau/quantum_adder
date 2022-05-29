@@ -4,7 +4,7 @@ from braket.circuits import Circuit
 from braket.aws import AwsDevice
 
 # Use AWS cloud simulator
-device = AwsDevice("arn:aws:braket:::device/quantum-simulator/amazon/dm1")
+#device = AwsDevice("arn:aws:braket:::device/quantum-simulator/amazon/dm1")
 # Use 11 qubit quantum computer from IonQ - n.b. 1000 shots = about $10.30
 #device = AwsDevice("arn:aws:braket:::device/qpu/ionq/ionQdevice")
 # Use 38 qubit quantum computer from Rigetti - n.b. 1000 shots = about $0.65
@@ -12,7 +12,7 @@ device = AwsDevice("arn:aws:braket:::device/quantum-simulator/amazon/dm1")
 # Use 80 qubit quantum computer from Rigetti - n.b. 1000 shots = about $0.65
 #device = AwsDevice("arn:aws:braket:us-west-1::device/qpu/rigetti/Aspen-M-1")
 # Use 8 qubit quantum computer from OQC - n.b. 1000 shots = about $0.65
-#device = AwsDevice("arn:aws:braket:eu-west-2::device/qpu/oqc/Lucy")
+device = AwsDevice("arn:aws:braket:eu-west-2::device/qpu/oqc/Lucy")
 
 #device_operations = device.properties.dict()['action']['braket.ir.jaqcd.program']['supportedOperations']
 #print('Quantum Gates supported by {}:\n {}'.format(device.name, device_operations))
