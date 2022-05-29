@@ -78,6 +78,7 @@ print(circuit.draw())
 # supported by the backend (not needed for simple circuits)
 ###compiled_circuit = transpile(circuit, simulator)
 compiled_circuit = transpile(circuit, backend)
+print("Compiled circuit depth = ",compiled_circuit.depth())
 
 # Execute the circuit on the qasm simulator
 ###job = simulator.run(compiled_circuit, shots=1000)
