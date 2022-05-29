@@ -43,5 +43,26 @@ Total counts are: {'101': 1000}
 ```
 You can see that it has run 1000 times, and every time it has come up with the right answer of 2 + 3, i.e. 5 (0b101).
 
-The `addcloud.py` version will take longer to run as it is executing on a real quantum computer somewhere, which might take a while if that quantum computer has a lot of compute jobs queued up. It will also return a range of counts due to the noise inherent in a real quantum computer, so the code will pop up a histogram at the end to make it easier to understand. The histogram from a real quantum computer will look something like this:
+The AWS Braket one looks a bit different, but essentially the same:
+```
+% python3 add_aws.py
+T  : |0|1|2|3|4|5|6| 7 |
+
+q0 : -------C-----C-C---
+            |     | |
+q1 : -X-C-C-X-C-C-X-|-C-
+        | | | | | | | |
+q2 : -X-|-|-C-|-|-C-X-|-
+        | |   | |     |
+q3 : -X-X-|---C-X-----X-
+          |   |
+q4 : -----X---X---------
+
+T  : |0|1|2|3|4|5|6| 7 |
+Compiled circuit depth =  8
+
+Total counts are: {'101': 1.0}
+```
+
+The `addcloud.py` (and `addcloud_aws.py`) version will take longer to run as it is executing on a real quantum computer somewhere, which might take a while if that quantum computer has a lot of compute jobs queued up. It will also return a range of counts due to the noise inherent in a real quantum computer, so the code will pop up a histogram at the end to make it easier to understand. The histogram from a real quantum computer will look something like this:
 ![Screenshot of histogram from an actual run of addcloud.py](assets/histogram_example.png)
