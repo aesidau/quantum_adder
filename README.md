@@ -65,4 +65,6 @@ Total counts are: {'101': 1000}
 ```
 
 The `addcloud.py` (and `addcloud_aws.py`) version will take longer to run as it is executing on a real quantum computer somewhere, which might take a while if that quantum computer has a lot of compute jobs queued up. It will also return a range of counts due to the noise inherent in a real quantum computer, so the code will pop up a histogram at the end to make it easier to understand. The histogram from a real quantum computer will look something like this:
-![Screenshot of histogram from an actual run of addcloud.py](assets/histogram_example.png)
+![Screenshot of histogram from an actual run of addcloud.py on IBM Belem system](assets/histogram_example.png)
+or like this:
+[!Screenshot of histogram from an actual run of addcloud_aws.py on OQC Lucy system](assets/histogram_example_aws_lucy.png)
